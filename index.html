@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <div class="fakeLoader"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000" />
+    <title>Flappy Zeta</title>
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./fakeLoader.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Flappy Zeta</h1>
+        <div class="score-container">
+          <div id="bestScore"></div>
+          <div id="currentScore"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-canvas">
+      <canvas id="canvas" width="420" height="768"></canvas>
+      <figure>
+        <audio controls autoplay loop>
+          <source src="./audio/night-city-knight-127028.mp3" type="audio/mpeg" />
+        </audio>
+      </figure>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="./fakeLoader.js"></script>
+    <script>
+      $(document).ready(function () {
+        $.fakeLoader({
+          bgColor: "#000",
+          spinner: "spinner7",
+          timeToHide: 4000,
+        });
+      });
+    </script>
+  </body>
+</html>

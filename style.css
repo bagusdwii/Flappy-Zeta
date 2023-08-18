@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap");
+
+body {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Bricolage Grotesque", sans-serif;
+  user-select: none;
+  background-color: #333;
+}
+h1 {
+  background: rgba(17, 17, 17, 0.38);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(17, 17, 17, 0.3);
+  padding: 1rem 0;
+  margin: 0;
+  color: white;
+}
+.score-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 6px;
+  font-weight: bold;
+  background: #333;
+  color: white;
+}
+
+audio {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    display: flex;
+    min-width: 20vw;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  .score-container {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    /* From https://css.glass */
+    background: rgba(255, 253, 253, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 253, 253, 0.3);
+  }
+
+  .container-canvas {
+    display: flex;
+    max-width: 100vw;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+  }
+
+  canvas {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100;
+  }
+}
